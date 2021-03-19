@@ -79,10 +79,10 @@ docker push docker.io/${DOCKER_HUB_USERNAME}/kafka-smasher
 Create the namespace, the source and the sink:
 
 ```bash
-kubectl -f config/01-namespace.yaml
-kubectl -f config/02-sink.yaml
-kubectl -f config/03-topic.yaml
-kubectl -f config/04-source.yaml
+kubectl apply -f config/01-namespace.yaml
+kubectl apply -f config/02-sink.yaml
+kubectl apply -f config/03-topic.yaml
+kubectl apply -f config/04-source.yaml
 ```
 
 Start watching the sink Knative service logs:
